@@ -3,7 +3,7 @@
 
 ## Setting up the project
 
-Clone the repository into your local Machine, and issue the following command inside the project directory.This will install all the required modules.
+Clone the repository into your local Machine, and issue the following command inside the project directory. This will install all the required modules.
 ```
 npm install
 ```
