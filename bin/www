@@ -87,4 +87,8 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  if(app.get('env') === 'development') {
+    console.log('Listening on ' + bind);
+  }
+  
 }
