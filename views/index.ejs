@@ -2,7 +2,48 @@
   <html>
       <%- include header.ejs %>
       <body>
-        <h1>Test run</h1>
+        <nav class="nav-extended">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#">Sahyadri</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="nav-content">
+            <ul id="nav_tabs" class="tabs tabs-transparent">
+              <li class="tab"><a href="#home_page" class="active">Home</a></li>
+              <li class="tab"><a href="#events_page">Events</a></li>
+              <li class="tab"><a href="#teams_page">Team</a></li>
+              <li class="tab"><a href="#sponsors_page">Sponsors</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+
+        <div class="container">
+                <%- include home.ejs %>
+                <%- include events.ejs %>
+                <%- include team.ejs %>
+                <%- include sponsors.ejs %>
+        </div>
+
+        <script type="text/javascript" src="javascripts/bin/materialize.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var navTabs = M.Tabs.init(document.getElementById('nav_tabs'));
+            var sideNav = M.Sidenav.init(document.querySelector('.sidenav'));
+            navTabs.updateTabIndicator();
+          });
+          
+        </script>
       </body>
       <%- include footer.ejs %>
   </html>
