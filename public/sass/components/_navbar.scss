@@ -15,7 +15,7 @@ nav {
 
   color: $navbar-font-color;
   @extend .z-depth-1;
-  background-color: $primary-color;
+  background-color: color("shades","white");
   width: 100%;
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
@@ -62,7 +62,7 @@ nav {
     color: $navbar-font-color;
     display: inline-block;
     font-size: $navbar-brand-font-size;
-    padding: 0;
+    padding: 0px 0px 0px 15px;
 
     &.center {
       left: 50%;
@@ -72,6 +72,7 @@ nav {
     @media #{$medium-and-down} {
       left: 50%;
       transform: translateX(-50%);
+      padding: 0;
 
       &.left, &.right {
         padding: 0;
