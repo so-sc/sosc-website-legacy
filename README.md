@@ -13,6 +13,7 @@ To run the app in [localhost:3000](localhost:3000)
 npm start
 ```
 
+
 ## Setting up the project for Contribution
 **step 1.**
 Fork this repository to your account, and clone it to your local machine.
@@ -31,6 +32,17 @@ sudo apt-get install ruby
 Installing SASS
 ```
 sudo gem install sass --no-user-install
+```
+Installing compass
+```
+gem update --system
+gem install compass
+```
+To automate the Gulp tasks to preprocess sass and clean the css, run the gulp command on a seperate terminal.
+
+watch for changes in scss files
+```
+gulp
 ```
 **step 3.**
 Setup the git upstream to the main repository.
