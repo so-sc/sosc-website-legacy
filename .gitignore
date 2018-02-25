@@ -62,3 +62,6 @@ typings/
 
 # sass cache
 .sass-cache
+
+# VSCode settings
+.vscode/
