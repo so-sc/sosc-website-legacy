@@ -2,7 +2,9 @@
   <html>
       <%- include header.ejs %>
       <body>
+
         <nav class="nav-extended">
+        <div class="container">
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">SHINE</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -20,6 +22,7 @@
               <li class="tab"><a href="#sponsors_page">Sponsors</a></li>
             </ul>
           </div>
+          </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
@@ -28,12 +31,15 @@
           <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
 
-        <div class="container">
-                <%- include home.ejs %>
-                <%- include events.ejs %>
-                <%- include team.ejs %>
-                <%- include sponsors.ejs %>
+        <div class="">
+        
+          <%- include home.ejs %>
+          <%- include events.ejs %>
+          <%- include team.ejs %>
+          <%- include sponsors.ejs %>
+        
         </div>
+                
 
         <script type="text/javascript" src="javascripts/bin/materialize.min.js"></script>
         <script>
