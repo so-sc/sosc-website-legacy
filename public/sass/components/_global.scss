@@ -8,13 +8,13 @@ html {
 }
 
 body {
-  // display: flex;
-  // min-height: 100vh;
-  // flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
-  // flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 button,
@@ -105,7 +105,7 @@ a {
   transition: box-shadow .25s;
 
   &:hover {
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
 
@@ -773,4 +773,13 @@ td, th{
 .nunito {
   font-family: 'Nunito',sans-serif;
   margin-top: 100px; 
+}
+
+.dashy-underline {
+  margin: 20px 0 30px 0;
+  width:30px;
+  height:5px;
+  background-color: $primary-color ;
+  border:0;
+  text-align:left;
 }
