@@ -3155,6 +3155,18 @@ html {
   box-sizing: inherit;
 }
 
+/* line 10, ../sass/components/_global.scss */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* line 16, ../sass/components/_global.scss */
+main {
+  flex: 1 0 auto;
+}
+
 /* line 20, ../sass/components/_global.scss */
 button,
 input,
@@ -3199,7 +3211,7 @@ a {
 
 /* 2dp elevation modified*/
 /* line 67, ../sass/components/_global.scss */
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+.z-depth-1, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .sidenav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -3238,7 +3250,7 @@ a {
 }
 /* line 107, ../sass/components/_global.scss */
 .hoverable:hover {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* line 114, ../sass/components/_global.scss */
@@ -3936,6 +3948,16 @@ input[type=range] + .thumb {
 .nunito {
   font-family: 'Nunito',sans-serif;
   margin-top: 100px;
+}
+
+/* line 778, ../sass/components/_global.scss */
+.dashy-underline {
+  margin: 20px 0 30px 0;
+  width: 30px;
+  height: 5px;
+  background-color: #4CAF50;
+  border: 0;
+  text-align: left;
 }
 
 /* line 2, ../sass/components/_badges.scss */
@@ -4988,6 +5010,7 @@ nav ul a span.badge {
 /* line 1, ../sass/components/_navbar.scss */
 nav {
   color: #424242;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.02);
   background-color: #FFFFFF;
   width: 100%;
   height: 56px;
@@ -5443,6 +5466,15 @@ small {
   .flow-text {
     font-size: 1.2rem;
   }
+}
+
+/* line 62, ../sass/components/_typography.scss */
+.shadow-card-title {
+  font-size: 1.3em;
+  line-height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /* line 2, ../sass/components/_transitions.scss */
@@ -9569,4 +9601,48 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem;
   }
+}
+/* line 1, ../sass/components/_adjustments.scss */
+.no-pad {
+  padding: 0;
+}
+
+/* line 5, ../sass/components/_adjustments.scss */
+.pad10 {
+  padding: 10px;
+}
+
+/* line 9, ../sass/components/_adjustments.scss */
+.pad20 {
+  padding: 20px;
+}
+
+/* line 13, ../sass/components/_adjustments.scss */
+.pad30 {
+  padding: 30px;
+}
+
+/* line 17, ../sass/components/_adjustments.scss */
+.no-mar {
+  margin: 0;
+}
+
+/* line 20, ../sass/components/_adjustments.scss */
+.mar10 {
+  margin: 10px;
+}
+
+/* line 23, ../sass/components/_adjustments.scss */
+.mar20 {
+  margin: 20px;
+}
+
+/* line 26, ../sass/components/_adjustments.scss */
+.mar30 {
+  margin: 30px;
+}
+
+/* line 29, ../sass/components/_adjustments.scss */
+.mar40 {
+  margin: 40px;
 }
