@@ -3931,33 +3931,9 @@ input[type=range] + .thumb {
 }
 
 /* line 761, ../sass/components/_global.scss */
-.home-banner {
-  background-color: #4CAF50;
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100vh;
-}
-
-/* line 769, ../sass/components/_global.scss */
-.m20top {
-  margin-top: 20px;
-}
-
-/* line 773, ../sass/components/_global.scss */
 .nunito {
   font-family: 'Nunito',sans-serif;
   margin-top: 100px;
-}
-
-/* line 778, ../sass/components/_global.scss */
-.dashy-underline {
-  margin: 20px 0 30px 0;
-  width: 30px;
-  height: 5px;
-  background-color: #4CAF50;
-  border: 0;
-  text-align: left;
 }
 
 /* line 2, ../sass/components/_badges.scss */
@@ -9633,16 +9609,108 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 }
 
 /* line 23, ../sass/components/_adjustments.scss */
+.mar10top {
+  margin-top: 10px;
+}
+
+/* line 26, ../sass/components/_adjustments.scss */
 .mar20 {
   margin: 20px;
 }
 
-/* line 26, ../sass/components/_adjustments.scss */
+/* line 29, ../sass/components/_adjustments.scss */
+.mar20top {
+  margin-top: 20px;
+}
+
+/* line 32, ../sass/components/_adjustments.scss */
 .mar30 {
   margin: 30px;
 }
 
-/* line 29, ../sass/components/_adjustments.scss */
+/* line 35, ../sass/components/_adjustments.scss */
+.mar30top {
+  margin-top: 30px;
+}
+
+/* line 38, ../sass/components/_adjustments.scss */
 .mar40 {
   margin: 40px;
+}
+
+/* line 2, ../sass/components/_customcomponents.scss */
+.home-banner {
+  background-color: #4CAF50;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 11, ../sass/components/_customcomponents.scss */
+.dashy-underline {
+  margin: 20px 0 30px 0;
+  width: 30px;
+  height: 5px;
+  background-color: #4CAF50;
+  border: 0;
+  text-align: left;
+}
+
+/* line 20, ../sass/components/_customcomponents.scss */
+.size200 {
+  width: 230px;
+}
+
+/* line 23, ../sass/components/_customcomponents.scss */
+.pad5 {
+  padding: 10px;
+}
+
+/* line 26, ../sass/components/_customcomponents.scss */
+.pad10 {
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+
+/* line 32, ../sass/components/_customcomponents.scss */
+.propic-card {
+  border-radius: 5px;
+}
+
+/* line 36, ../sass/components/_customcomponents.scss */
+.propic-card .propic {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 41, ../sass/components/_customcomponents.scss */
+.propic-card .name {
+  font-size: 18px;
+  padding: 0;
+}
+
+/* line 46, ../sass/components/_customcomponents.scss */
+.propic-card .caption {
+  font-size: 14px;
+  opacity: 0.7;
+  padding: 0;
+}
+
+/* line 51, ../sass/components/_customcomponents.scss */
+.mar5top {
+  margin-top: 10px;
+}
+
+/* line 54, ../sass/components/_customcomponents.scss */
+.mar0top {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* line 59, ../sass/components/_customcomponents.scss */
+.mar0bot {
+  margin-bottom: 0px;
 }
