@@ -26,6 +26,18 @@ gulp.task('compass', function() {
       .pipe(gulp.dest('./public/stylesheets'));
 });
 
+//auto generate service worker
+gulp.task('generate-service-worker', function(callback) {
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+  var publicDir = './public';
+  var caching_files = ['./public/stylesheets/*.css','./public/images/team/*.jpg','./public/images/icons/*.png','./public/javascripts/bin/{materialize.min.js,lazyload.min.js}','./public/fonts/{lato,nunito}/*.{woff,woff2,css}','./public/manifest.json'];
+  swPrecache.write(path.join(publicDir, 'sw.js'), {
+    staticFileGlobs: caching_files,
+    stripPrefix: publicDir
+  }, callback);
+});
+
 // the default task to rum both sass preprocessing and clean-css
 gulp.task('default', ['compass', 'clean']);
 
