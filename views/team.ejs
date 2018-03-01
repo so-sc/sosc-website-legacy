@@ -1,232 +1,132 @@
 <!-- All the internal styles have been moved to /scss/components/_customcomponents.scss -->
 <div class="container">
-<div id="teams_page" class="col s12" style="margin-top: 50px;">
-  <h4 class="center">Our team</h4>
-  <div class="row mar0bot center">
-  <div class="col s12 m6 l3 pad10">
-    <div class="cards white accent-4 size200 pad10 propic-card center">
-      <div class="row">
-        <img data-src="images/team/prakhyath_rai.jpg" class="propic circle mar5top" />
-      </div>
-      <span class="black-text name">
-            Mr.Prakhyath Rai
-          </span><br/><span class="grey-text caption pad5">
-             Faculty Coordinator
-          </span>
-    </div>
+<div id="teams_page" class="row" style="margin-top: 50px;">
+  <div class="col s12 m12 l12">
+     <p class="shadow-card-title" style="font-size: 1.7em;">Our Team</p>
+                    <div class="dashy-underline"></div>
   </div>
-  <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/johnson_tellis.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Mr. Johnson Tellis
-            </span><br/><span class="grey-text caption pad5">
-               Startups Program Coordinator
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-        <div class="cards white accent-4 size200 pad10 propic-card center">
-          <div class="row">
-            <img data-src="images/team/manjesh_p_shetty.jpg" class="propic circle mar5top " />
+  
+  <div>
+  <%
+    var data = [
+      {
+        name: 'Mr.Prakhyath Rai',
+        caption: 'Faculty Coordinator',
+        image: 'images/team/prakhyath_rai.jpg'
+      },
+      {
+        name: 'Mr. Jhonson Tellis',
+        caption: 'Startups progam Coordinator',
+        image: 'images/team/johnson_tellis.jpg'
+      },
+      {
+        name: 'Manjesh P Shetty',
+        caption: 'Student Program Coordinator',
+        image: 'images/team/manjesh_p_shetty.jpg'
+      },
+      {
+        name: ' Arjun Suvarna',
+        caption: 'Chairperson',
+        image: 'images/team/arjun_suvarna.jpg'
+      },
+      {
+        name: ' Jehad Mohamed',
+        caption: 'Vice Chairperson',
+        image: 'images/team/jehad_mohamed.jpg'
+      },
+      {
+        name: 'Musthaq Ahamad',
+        caption: 'Technical Head',
+        image: 'images/team/haxzie.jpg'
+      },
+      {
+        name: 'Akshay Ram Bhat',
+        caption: 'Technical Co-Head',
+        image: 'images/team/akshay_ram_bhat.jpg'
+      },
+      {
+        name: 'Chaman K',
+        caption: 'Web Admin',
+        image: 'images/team/chaman_k.jpg'
+      },
+      {
+        name: 'Raees Nazeer',
+        caption: 'Co-Web Admin',
+        image: 'images/team/raees_nazeer.jpg'
+      },
+      {
+        name: 'Srujan U',
+        caption: 'Project Coordinator',
+        image: 'images/team/srujan_u.jpg'
+      },
+      {
+        name: 'Akashdeep',
+        caption: 'Co-Project Coordinator',
+        image: 'images/team/akashdeep.jpg'
+      },
+      {
+        name: 'Afroz Hussain',
+        caption: 'Design Head',
+        image: 'images/team/afroz_hussain.jpg'
+      },
+      {
+        name: 'Ryan Mathew',
+        caption: 'Design Co-Head',
+        image: 'images/team/nathaniel_ryan_mathew.jpg'
+      },
+      {
+        name: 'Monisha Tarkar',
+        caption: 'Sponsorship &amp; Marketing Head',
+        image: 'images/team/monisha_tarkar.jpg'
+      },
+      {
+        name: 'Riya Batra',
+        caption: 'Finance Head',
+        image: 'images/team/riya_batra.jpg'
+      },
+      {
+        name: 'Devansh N Hingrajia',
+        caption: 'Event Manager',
+        image: 'images/team/devansh_n_hingrajia.jpg'
+      },
+      {
+        name: 'Navneeth Krishna',
+        caption: 'HR Head',
+        image: 'images/team/navneeth_krishna.jpg'
+      },
+      {
+        name: 'Kishan Ghetia',
+        caption: 'Blogger/Development Head',
+        image: 'images/team/kishan_ghetia.jpg'
+      },
+      
+    ];
+
+    var first = true;
+    for( var i = 0; i < data.length; i++) { %>
+
+        <% if (i%4 === 0){ %>
+           
+            </div>
+            <div class="row mar0bot center">
+
+       <% } %>
+
+        <div class="col s12 m6 l3 pad10">
+          <div class="cards white accent-4 size200 pad10 propic-card center">
+            <div class="row">
+              <img data-src="<%= data[i].image %>" class="propic circle mar5top " />
           </div>
           <span class="black-text name">
-                Manjesh P Shetty
-              </span><br/><span class="grey-text caption pad5">
-                 Student Program Coordinator
-              </span>
-        </div>
-      </div>
-      <div class="col s12 m6 l3 pad10">
-          <div class="cards white accent-4 size200 pad10 propic-card center">
-            <div class="row ">
-              <img data-src="images/team/arjun_suvarna.jpg" class="propic circle mar5top " />
-            </div>
-            <span class="black-text name">
-                  Arjun Suvarna
-                </span><br/><span class="grey-text caption pad5">
-                   Chairperson <br>
-                </span>
-          </div>
-        </div>
-  </div>
-  <div class="row  mar0bot center">
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/jehad_mohamed.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Jehad Mohamed
+              <%= data[i].name %>
             </span><br/><span class="grey-text caption pad5">
-               Vice Chairperson
+               <%= data[i].caption %>
             </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/haxzie.jpg" class="propic circle mar5top " />
         </div>
-        <span class="black-text name">
-              Musthaq Ahamad
-            </span><br/><span class="grey-text caption pad5">
-               Technical Head
-            </span>
       </div>
+    <% } %>
+
     </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/akshay_ram_bhat.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Akshay Ram Bhat
-            </span><br/><span class="grey-text caption pad5">
-               Technical Co-Head
-            </span>
-      </div>
     </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/chaman_k.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Chaman K
-            </span><br/><span class="grey-text caption pad5">
-               Web Admin
-            </span>
-      </div>
-    </div>
-  </div>
-  <div class="row  mar0bot center">
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/raees_nazeer.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Raees Nazeer
-            </span><br/><span class="grey-text caption pad5">
-               Co-Web Admin
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/srujan_u.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Srujan U
-            </span><br/><span class="grey-text caption pad5">
-               Project Coordinator
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/akashdeep.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Akashdeep
-            </span><br/><span class="grey-text caption pad5">
-                Co-Project Coordinator
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/afroz_hussain.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Afroz Hussain
-            </span><br/><span class="grey-text caption pad5">
-               Design Head
-            </span>
-      </div>
-    </div>
-  </div>
-  <div class="row  mar0bot center">
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/nathaniel_ryan_mathew.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-          Ryan Mathew
-            </span><br/><span class="grey-text caption pad5">
-               Design Co-Head
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/monisha_tarkar.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Monisha Tarkar
-            </span><br/><span class="grey-text caption pad5">
-               Sponsorship &amp; Marketing Head
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/riya_batra.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Riya Batra
-            </span><br/><span class="grey-text caption pad5">
-               Finance Head
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/devansh_n_hingrajia.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-          Devansh N Hingrajia
-            </span><br/><span class="grey-text caption pad5">
-               Event Manager
-            </span>
-      </div>
-    </div>
-  </div>
-  <div class="row mar0bot center">
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/navneeth_krishna.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Navneeth Krishna
-            </span><br/><span class="grey-text caption pad5">
-               HR Head
-            </span>
-      </div>
-    </div>
-    <div class="col s12 m6 l3 pad10">
-      <div class="cards white accent-4 size200 pad10 propic-card center">
-        <div class="row">
-          <img data-src="images/team/kishan_ghetia.jpg" class="propic circle mar5top " />
-        </div>
-        <span class="black-text name">
-              Kishan Ghetia
-            </span><br/><span class="grey-text caption pad5">
-              Blogger/Development Head
-            </span>
-      </div>
-    </div>
-  </div>
   </div>
   </div>

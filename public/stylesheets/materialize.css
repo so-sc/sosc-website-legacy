@@ -5447,6 +5447,11 @@ small {
   font-weight: bold;
 }
 
+/* line 70, ../sass/components/_typography.scss */
+.justify {
+  text-align: justify;
+}
+
 /* line 2, ../sass/components/_transitions.scss */
 .scale-transition {
   transition: transform 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
