@@ -1,6 +1,6 @@
 {
     "short_name": "SHINE",
-    "name": "SHINE-Sahyadri Hub of Innovation and Entrepreneurship",
+    "name": "SHINE-Sahyadri Hub for Innovation and Entrepreneurship",
     "icons": [
       {
         "src": "images/icons/shine_light_transparent_48.png",
@@ -19,5 +19,5 @@
       }
     ],
     "display": "standalone",
-    "start_url": "/"
+    "start_url": "."
   }
