@@ -9769,11 +9769,30 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   margin: auto;
 }
 
-/* line 101, ../sass/components/_customcomponents.scss */
+/* line 119, ../sass/components/_customcomponents.scss */
+.float {
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+/* line 127, ../sass/components/_customcomponents.scss */
+.float:hover {
+  transform: translateY(-5px);
+}
+
+/* line 132, ../sass/components/_customcomponents.scss */
 .event_card {
   height: 200px;
+  transition-duration: 0.3s;
+  transition-property: transform;
 }
-/* line 106, ../sass/components/_customcomponents.scss */
+/* line 138, ../sass/components/_customcomponents.scss */
 .event_card .contents {
   padding: 20px 20px 10px 20px;
+}
+/* line 145, ../sass/components/_customcomponents.scss */
+.event_card:hover {
+  transform: translateY(-5px);
 }
