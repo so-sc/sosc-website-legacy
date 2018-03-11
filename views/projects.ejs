@@ -1,0 +1,82 @@
+<div id="projects_page" class="col s12">
+    <div class="container">
+        <div class="col s12 m12 l12">
+            <p class="shadow-card-title" style="font-size: 1.7em;">Projects</p>
+            <div class="dashy-underline"></div>
+        </div>
+        <div id="projects" class="row mar0bot"></div>
+    </div>
+</div> 
+
+
+<script>
+             function display(repo){
+                var div = document.getElementById("projects");
+                var colDiv = document.createElement("div");
+                colDiv.className = 'col s12 m4 l3';
+                var cardDiv = document.createElement("div");
+                cardDiv.className = 'card';
+                var cardImageDiv = document.createElement("div");
+                cardImageDiv.className = 'card-image waves-effect waves-block waves-light';
+                var image = document.createElement("img");
+                image.className = 'activator';
+                image.setAttribute("src",repo.owner.avatar_url);
+                cardImageDiv.appendChild(image);
+                cardDiv.appendChild(cardImageDiv);
+                
+                var iContent = document.createElement("i");
+                iContent.className = 'material-icons right';
+                var iContentInner = document.createTextNode("more_vert");
+                iContent.appendChild(iContentInner);
+
+                var pContent = document.createElement("p");
+                var aContent = document.createElement("a");
+                aContent.setAttribute("href",repo.svn_url);
+                var aContentInner = document.createTextNode("Github");
+                aContent.appendChild(aContentInner);
+                pContent.appendChild(aContent);
+
+                var spanContent = document.createElement("span");
+                spanContent.className = 'card-title activator grey-text text-darken-4';
+                var spanContentInner = document.createTextNode(repo.name);
+                spanContent.appendChild(spanContentInner);
+                spanContent.appendChild(iContent);
+
+                var cardContentDiv = document.createElement("div");
+                cardContentDiv.appendChild(spanContent);
+                cardContentDiv.appendChild(pContent);
+                cardDiv.appendChild(cardContentDiv);
+
+                var cardRevealDiv = document.createElement("div");
+                cardRevealDiv.className = 'card-reveal';
+                var cardTitleSpan = document.createElement("span");
+                cardTitleSpan.className = 'card-title grey-text text-darken-4';
+                cardTitleSpan.innerText = repo.name;
+                var iCardTitle = document.createElement("i");
+                iCardTitle.className = 'material-icons right';
+                iCardTitle.innerText = "close";
+                cardTitleSpan.appendChild(iCardTitle);
+                var pCardReveal = document.createElement("p");
+                pCardReveal.innerText = repo.description;
+                cardRevealDiv.appendChild(cardTitleSpan);
+                cardRevealDiv.appendChild(pCardReveal);
+                cardDiv.appendChild(cardRevealDiv);
+
+                colDiv.appendChild(cardDiv);
+                div.appendChild(colDiv);
+            }
+            function loadXMLDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var res = JSON.parse(this.responseText);
+                    res.map(display);
+                }
+                };
+            xhttp.open("GET", "https://api.github.com/orgs/so-sc/repos", true);
+            xhttp.send();
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                loadXMLDoc();
+            });
+</script>

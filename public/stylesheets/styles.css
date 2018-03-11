@@ -5441,7 +5441,7 @@ small {
 }
 
 /* line 62, ../sass/components/_typography.scss */
-.shadow-card-title {
+.shadow-card-title, .event_card .contents .title {
   font-size: 1.3em;
   line-height: 100%;
   margin-top: 10px;
@@ -9658,17 +9658,17 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   text-align: left;
 }
 
-/* line 20, ../sass/components/_customcomponents.scss */
+/* line 19, ../sass/components/_customcomponents.scss */
 .size200 {
   width: 230px;
 }
 
-/* line 23, ../sass/components/_customcomponents.scss */
+/* line 22, ../sass/components/_customcomponents.scss */
 .pad5 {
   padding: 10px;
 }
 
-/* line 26, ../sass/components/_customcomponents.scss */
+/* line 25, ../sass/components/_customcomponents.scss */
 .pad10 {
   padding-top: 10px;
   padding-left: 25px;
@@ -9676,62 +9676,62 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   padding-bottom: 10px;
 }
 
-/* line 32, ../sass/components/_customcomponents.scss */
+/* line 31, ../sass/components/_customcomponents.scss */
 .propic-card {
   border-radius: 5px;
 }
 
-/* line 36, ../sass/components/_customcomponents.scss */
+/* line 35, ../sass/components/_customcomponents.scss */
 .propic-card .propic {
   width: 150px;
   height: 150px;
 }
 
-/* line 41, ../sass/components/_customcomponents.scss */
+/* line 40, ../sass/components/_customcomponents.scss */
 .propic-card .name {
   font-size: 18px;
   padding: 0;
 }
 
-/* line 46, ../sass/components/_customcomponents.scss */
+/* line 45, ../sass/components/_customcomponents.scss */
 .propic-card .caption {
   font-size: 14px;
   opacity: 0.7;
   padding: 0;
 }
 
-/* line 51, ../sass/components/_customcomponents.scss */
+/* line 50, ../sass/components/_customcomponents.scss */
 .mar5top {
   margin-top: 10px;
 }
 
-/* line 54, ../sass/components/_customcomponents.scss */
+/* line 53, ../sass/components/_customcomponents.scss */
 .mar0top {
   margin-top: 0px;
   padding-top: 0px;
 }
 
-/* line 59, ../sass/components/_customcomponents.scss */
+/* line 58, ../sass/components/_customcomponents.scss */
 .mar0bot {
   margin-bottom: 0px;
 }
 
-/* line 63, ../sass/components/_customcomponents.scss */
+/* line 61, ../sass/components/_customcomponents.scss */
 .nunito {
   font-family: 'Nunito',sans-serif;
   margin-top: 50px;
   font-size: 2.5em;
 }
 
-/* line 69, ../sass/components/_customcomponents.scss */
+/* line 66, ../sass/components/_customcomponents.scss */
 .main_logo {
   width: 200px;
   height: 110px;
   margin-top: 100px;
 }
 
-/* line 75, ../sass/components/_customcomponents.scss */
-.cards {
+/* line 71, ../sass/components/_customcomponents.scss */
+.cards, .event_card {
   background: #fff;
   border-radius: 3px;
   display: inline-block;
@@ -9741,14 +9741,39 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   width: 100%;
 }
 
-/* line 84, ../sass/components/_customcomponents.scss */
-.cards-3 {
+/* line 80, ../sass/components/_customcomponents.scss */
+.cards-3, .event_card {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* line 88, ../sass/components/_customcomponents.scss */
+/* line 83, ../sass/components/_customcomponents.scss */
 .nav_logo {
   width: 90px;
   height: 54px;
   padding: 5px;
+}
+
+/* line 88, ../sass/components/_customcomponents.scss */
+.logo-card {
+  height: 200px;
+  padding: 20px;
+  position: relative;
+}
+/* line 92, ../sass/components/_customcomponents.scss */
+.logo-card img, .logo-card svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 101, ../sass/components/_customcomponents.scss */
+.event_card {
+  height: 200px;
+}
+/* line 106, ../sass/components/_customcomponents.scss */
+.event_card .contents {
+  padding: 20px 20px 10px 20px;
 }
