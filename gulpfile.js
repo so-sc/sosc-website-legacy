@@ -17,13 +17,25 @@ gulp.task('clean', function() {
 // task to compile the sass files to css
 gulp.task('compass', function() {
     console.log('compass','preprocessing sass...');
-    gulp.src('./public/sass/styles.scss')
+    gulp.src('./public/sass/**/*.scss')
       .pipe(compass({
         config_file: './config.rb',
         css: 'public/stylesheets',
         sass: 'public/sass'
       }))
       .pipe(gulp.dest('./public/stylesheets'));
+});
+
+//auto generate service worker
+gulp.task('generate-sw', function(callback) {
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+  var publicDir = './public';
+  var caching_files = ['./public/stylesheets/*.css','./public/images/*.{jpg,png,ico,svg}','./public/images/**/*.{jpg,png,ico,svg}','./public/javascripts/bin/{materialize.min.js,lazyload.min.js}','./public/fonts/{lato,nunito}/*.{woff,woff2,css}','./public/manifest.json'];
+  swPrecache.write(path.join(publicDir, 'sw.js'), {
+    staticFileGlobs: caching_files,
+    stripPrefix: publicDir
+  }, callback);
 });
 
 // the default task to rum both sass preprocessing and clean-css
