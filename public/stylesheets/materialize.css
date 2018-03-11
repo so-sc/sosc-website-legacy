@@ -9750,3 +9750,19 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   height: 54px;
   padding: 5px;
 }
+
+/* line 94, ../sass/components/_customcomponents.scss */
+.logo-card {
+  height: 200px;
+  padding: 20px;
+  position: relative;
+}
+/* line 99, ../sass/components/_customcomponents.scss */
+.logo-card img, .logo-card svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
