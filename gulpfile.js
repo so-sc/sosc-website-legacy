@@ -17,7 +17,7 @@ gulp.task('clean', function() {
 // task to compile the sass files to css
 gulp.task('compass', function() {
     console.log('compass','preprocessing sass...');
-    gulp.src('./public/sass/styles.scss')
+    gulp.src('./public/sass/**/*.scss')
       .pipe(compass({
         config_file: './config.rb',
         css: 'public/stylesheets',
