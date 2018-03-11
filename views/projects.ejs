@@ -1,4 +1,4 @@
-<div id="projects_page" class="col s12">
+<div id="projects_page" class="col s12" style="margin-top: 50px;">
     <div class="container">
         <div class="col s12 m12 l12">
             <p class="shadow-card-title" style="font-size: 1.7em;">Projects</p>
@@ -10,10 +10,41 @@
 
 
 <script>
+
+
+            function create_repo_list(repo) {
+                var div = document.getElementById("projects");
+                var repo_card = document.createElement("div");
+                repo_card.className = "col s12 m6 l4";
+                repo_card.innerHTML = 
+                    `
+                        <a href="${repo.html_url}">
+                            <div class="event_card black-text">\
+                                <div class="contents">\
+                                    <p class="title">\
+                                        ${repo.name}\
+                                    </p>\
+                                    <p>\
+                                        ${repo.description}\
+                                    </p>\
+                                    <p class="grey-text text-lighten-1">\
+                                        ${repo.language}
+                                    </p>\
+                                </div>\
+                                <div class="col s12 valign-wrapper grey-text" style="position: absolute; bottom: 0; padding: 10px 20px 10px 20px;">\
+                                    <i class="tiny material-icons">star</i>&nbsp;${repo.stargazers_count}<i class="tiny material-icons" style="margin: 0 5px 0 20px;">visibility</i>${repo.watchers_count}
+                                    <i class="tiny material-icons" style="margin: 0 5px 0 20px;">person</i>${repo.forks_count}
+                                </div>\
+                            </div>
+                        </a>
+                    `;
+                div.appendChild(repo_card);
+            }
+
              function display(repo){
                 var div = document.getElementById("projects");
                 var colDiv = document.createElement("div");
-                colDiv.className = 'col s12 m4 l3';
+                colDiv.className = 'col s12 m4 l4';
                 var cardDiv = document.createElement("div");
                 cardDiv.className = 'card';
                 var cardImageDiv = document.createElement("div");
@@ -69,8 +100,9 @@
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var res = JSON.parse(this.responseText);
-                    res.map(display);
+                    var res = JSON.parse(this.responseText).reverse();
+                    console.log(this.responseText);
+                    res.map(create_repo_list);
                 }
                 };
             xhttp.open("GET", "https://api.github.com/orgs/so-sc/repos", true);

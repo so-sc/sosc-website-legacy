@@ -98,11 +98,43 @@
     margin: auto;
   }
 }
+
+
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+$defaultDuration: .3s;
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+
+.float {
+	transition-duration: $defaultDuration;
+	transition-property: transform;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+
 .event_card {
   height: 200px;
   @extend .cards;
   @extend .cards-3;
-
+  transition-duration: $defaultDuration;
+  transition-property: transform;  
   .contents {
     padding: 20px 20px 10px 20px;
 
@@ -110,5 +142,7 @@
       @extend .shadow-card-title;
     }
   }
-  
+  &:hover {
+		transform: translateY(-5px);
+	}
 }
