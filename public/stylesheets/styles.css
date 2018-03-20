@@ -3998,7 +3998,7 @@ nav ul a span.badge {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
+  width: 95%;
 }
 
 @media only screen and (min-width: 601px) {
@@ -9650,7 +9650,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 /* line 11, ../sass/components/_customcomponents.scss */
 .dashy-underline {
-  margin: 20px 0 30px 0;
+  margin: 20px 0 20px 0;
   width: 30px;
   height: 5px;
   background-color: #4CAF50;
@@ -9725,8 +9725,8 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 /* line 66, ../sass/components/_customcomponents.scss */
 .main_logo {
-  width: 200px;
-  height: 110px;
+  width: 220px;
+  height: 200px;
   margin-top: 100px;
 }
 
@@ -9748,18 +9748,19 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 
 /* line 83, ../sass/components/_customcomponents.scss */
 .nav_logo {
-  width: 90px;
-  height: 54px;
+  width: 75px;
+  height: 45px;
   padding: 5px;
+  margin-top: 10px;
 }
 
-/* line 88, ../sass/components/_customcomponents.scss */
+/* line 89, ../sass/components/_customcomponents.scss */
 .logo-card {
   height: 200px;
   padding: 20px;
   position: relative;
 }
-/* line 92, ../sass/components/_customcomponents.scss */
+/* line 93, ../sass/components/_customcomponents.scss */
 .logo-card img, .logo-card svg {
   position: absolute;
   top: 0;
@@ -9769,30 +9770,17 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
   margin: auto;
 }
 
-/* line 119, ../sass/components/_customcomponents.scss */
-.float {
-  transition-duration: 0.3s;
-  transition-property: transform;
-  -webkit-tap-highlight-color: transparent;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-}
-/* line 127, ../sass/components/_customcomponents.scss */
-.float:hover {
-  transform: translateY(-5px);
-}
-
-/* line 132, ../sass/components/_customcomponents.scss */
+/* line 103, ../sass/components/_customcomponents.scss */
 .event_card {
   height: 200px;
-  transition-duration: 0.3s;
+  transition-duration: .3s;
   transition-property: transform;
 }
-/* line 138, ../sass/components/_customcomponents.scss */
+/* line 109, ../sass/components/_customcomponents.scss */
 .event_card .contents {
   padding: 20px 20px 10px 20px;
 }
-/* line 145, ../sass/components/_customcomponents.scss */
+/* line 116, ../sass/components/_customcomponents.scss */
 .event_card:hover {
   transform: translateY(-5px);
 }
