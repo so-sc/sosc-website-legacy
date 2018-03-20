@@ -9,7 +9,7 @@
   
 
 .dashy-underline {
-  margin: 20px 0 30px 0;
+  margin: 20px 0 20px 0;
   width:30px;
   height:5px;
   background-color: $primary-color ;
@@ -64,8 +64,8 @@
   font-size: 2.5em; 
 }
 .main_logo {
-  width: 200px;
-  height: 110px;
+  width: 220px;
+  height: 200px;
   margin-top: 100px;
 }
 .cards {
@@ -81,9 +81,10 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.05);
 }
 .nav_logo {
-  width: 90px;
-  height: 54px;
+  width: 75px;
+  height: 45px;
   padding: 5px;
+  margin-top: 10px;
 }
 .logo-card {
   height: 200px;
@@ -99,41 +100,11 @@
   }
 }
 
-
-@mixin hideTapHighlightColor() {
-	//Prevent highlight colour when element is tapped
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@mixin hardwareAccel() {
-	//Improve performance on mobile/tablet devices
-	transform: translateZ(0);
-}
-$defaultDuration: .3s;
-@mixin improveAntiAlias() {
-	//Improve aliasing on mobile/tablet devices
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
-
-.float {
-	transition-duration: $defaultDuration;
-	transition-property: transform;
-
-	@include hideTapHighlightColor();
-	@include hardwareAccel();
-	@include improveAntiAlias();
-
-	&:hover {
-		transform: translateY(-5px);
-	}
-}
-
 .event_card {
   height: 200px;
   @extend .cards;
   @extend .cards-3;
-  transition-duration: $defaultDuration;
+  transition-duration: .3s;
   transition-property: transform;  
   .contents {
     padding: 20px 20px 10px 20px;
