@@ -1,5 +1,5 @@
-# SHINE
-**Website of Sahyadri Hub for Innovation and Entrepreneurship.(SHINE)**
+# SOSC - Website
+**Source code for the official website of Sahyadri Open-Source Community**
 
 ## Setting up the project
 
@@ -18,7 +18,7 @@ npm start
 **step 1.**
 Fork this repository to your account, and clone it to your local machine.
 ```
-git clone https://github.com/<YOUR_USERNAME>/SHINE.git
+git clone https://github.com/<YOUR_USERNAME>/sosc-website.git
 ```
 **step 2.**
 Make sure you have Ruby and Sass installed.
@@ -47,7 +47,7 @@ gulp
 **step 3.**
 Setup the git upstream to the main repository.
 ```
-git remote add upstream https://github.com/so-sc/so-sc.github.io.git
+git remote add upstream https://github.com/so-sc/sosc-website.git
 ```
 
 Keep your project frequently updated
